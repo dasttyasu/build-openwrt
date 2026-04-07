@@ -8,8 +8,6 @@
 
 # ------------------------------- Main source started -------------------------------
 #
-# Add amlogic feed source
-echo 'src-git amlogic https://github.com/ophub/luci-app-amlogic' >> feeds.conf.default
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
 # sed -i 's/luci-theme-bootstrap/luci-theme-material/g' ./feeds/luci/collections/luci/Makefile
@@ -31,8 +29,7 @@ echo "DISTRIB_SOURCECODE='lede'" >>package/base-files/files/etc/openwrt_release
 
 # ------------------------------- Other started -------------------------------
 #
-# Add luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+
 
 # Fix runc version error
 # rm -rf ./feeds/packages/utils/runc/Makefile
